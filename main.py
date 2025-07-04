@@ -73,10 +73,6 @@ def main():
         elif option == 3:
             save_tasks(tasks, fileName)
             break
-            
-
-
-
     return
 
 
