@@ -54,6 +54,8 @@ def main():
         
         print("Welcome to this To do app")
 
+        show_tasks(tasks)
+
         print("Choose an option:\n 1. Add a task\n 2. Delete/check a task\n 3. Quit")
 
         try:
@@ -65,10 +67,8 @@ def main():
 
 
         if option == 1:
-            show_tasks(tasks)
             add_task(tasks)
         elif option == 2:
-            show_tasks(tasks)
             check_task(tasks)
         elif option == 3:
             save_tasks(tasks, fileName)
