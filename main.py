@@ -41,13 +41,14 @@ def check_task(tasks):
         print("Please enter a valid number.")        
     return
 def show_tasks(tasks):
-    print("\n--- Your Tasks ---")
+    print("\n\033[96m--- Your Tasks ---\033[0m")  # Cyan header
     if not tasks:
-        print("Add some tasks first")
+        print("\033[91mNo tasks yet. Add some!\033[0m")  # Red warning
     else:
         for i, task in enumerate(tasks, 1):
-            print(f"{i}. {task}")
-    print("--------------\n")
+            print(f"\033[93m{i}.\033[0m {task}")  # Yellow numbers
+    print("\033[96m-------------------\033[0m\n")
+
 def main():
     tasks = load_tasks(fileName)
     while True:
